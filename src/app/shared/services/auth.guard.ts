@@ -7,7 +7,7 @@ import { AuthenticationService } from './authentication.service';
   export class AuthGaurd implements CanActivate {
     constructor(private auth: AuthenticationService, private router: Router) {}
 
-    canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot){
+    canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
       if (this.auth.isAuthenticated()) {
         console.log('Passed');
         return true;
